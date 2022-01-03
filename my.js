@@ -207,8 +207,8 @@ function addEvents() {
 
   //console.log(data);
   //console.log(newEvent.date[8] + newEvent.date[9]);
-  console.log(dayCell);
-  console.log(events);
+  //console.log(dayCell);
+  //console.log(events);
 
   dayCellDate.forEach((el) => {
     //console.log(el.childNodes[0].nodeValue);
@@ -216,7 +216,7 @@ function addEvents() {
       //console.log(currentMonth);
       //console.log(monthSelection.value);
       //console.log(elel.date[5] + elel.date[6]);
-      console.log(elel.date);
+      //console.log(elel.date);
       if (
         el.innerHTML === elel.date[8] + elel.date[9] &&
         elel.date[5] + elel.date[6] == 01 &&
