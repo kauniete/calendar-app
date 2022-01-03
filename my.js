@@ -169,7 +169,7 @@ function addEventsToStorage() {
       document
         .querySelector(".end-time")
         .setCustomValidity("Please fill out this field");
-      //return false;
+      
     } else if (
       document.querySelector(".start-time").value >=
       document.querySelector(".end-time").value
@@ -178,7 +178,7 @@ function addEventsToStorage() {
       document
         .querySelector(".end-time")
         .setCustomValidity("End date should be greater than Start date");
-      //return false;
+      
     } else {
       document.querySelector(".end-time").setCustomValidity("");
       let newEvent = new Object();
@@ -191,7 +191,7 @@ function addEventsToStorage() {
       newEvent.description = document.querySelector(".description").value;
       events.push(newEvent);
       sessionStorage.setItem("events", JSON.stringify(events));
-      //return true;
+     
     }
   });
 }
