@@ -98,6 +98,7 @@ let openFormButton = document.querySelectorAll(".create-entry-open-form");
 //console.log(openFormButton);
 openFormButton.forEach((el) => {
   el.addEventListener("click", function () {
+     document.querySelector(".event-details").style.display = "none";
     let creationForm = document.querySelector(".create-view");
     creationForm.style.display = "block";
   });
@@ -298,6 +299,7 @@ function viewEventDetails() {
 
   viewEventButton.forEach((elem) => {
     elem.addEventListener("click", function (elem) {
+       document.querySelector(".create-view").style.display = "none";
       //adding this condition to only show one event at once
       if (document.querySelector(".event-details-shown") != null) {
         document.querySelector(".event-details-shown").remove();
