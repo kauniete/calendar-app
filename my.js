@@ -211,7 +211,7 @@ function addEvents() {
  //console.log(events);
 
   dayCellDate.forEach((el) => {
-    console.log(el.innerHTML.length);
+    //console.log(el.innerHTML.length);
     //console.log(el.childNodes[0].nodeValue);
     events.forEach((elel) => {
       //console.log(currentMonth);
