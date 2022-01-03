@@ -201,7 +201,7 @@ addEventsToStorage();
 //add event to the calendar
 function addEvents() {
   events = JSON.parse(sessionStorage.getItem("events"));
-  console.log(events);
+  //console.log(events);
   let dayCell = document.querySelectorAll("td");
   let dayCellDate = document.querySelectorAll(".date-value");
 
@@ -276,7 +276,7 @@ function addEvents() {
           );
         }
       } else {
-        console.log("unfinished business");
+        //console.log("unfinished business");
       }
 
       let calendarEventColor = document.querySelectorAll(
