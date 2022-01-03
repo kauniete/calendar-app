@@ -141,7 +141,6 @@ form button {
     position: relative;
     width: 100%;
     z-index: 2;
-    height: 100vh;
     margin-left: 0;
   }
   .create-view {
@@ -187,6 +186,7 @@ form button {
     overflow-x: hidden;
     width: 100%;
     font-size: 12px;
+    height:100vh;
   }
   table {
     width: 100vw;
