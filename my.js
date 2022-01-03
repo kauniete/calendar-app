@@ -114,8 +114,8 @@ function addEventsToStorage() {
       {
         date: "2021-12-29",
         description: "Evaluation of the year",
-        endTime: "15:45",
-        startTime: "18:35",
+        endTime: "18:35",
+        startTime: "15:45",
         title: "Evaluation",
         type: "meeting",
       },
@@ -123,16 +123,16 @@ function addEventsToStorage() {
       {
         date: "2021-12-18",
         description: "make sure the email is set to autoreply",
-        endTime: "08:45",
-        startTime: "18:35",
+        endTime: "18:35",
+        startTime: "08:45",
         title: "Christmas day off",
         type: "out-of-office",
       },
       {
         date: "2022-01-12",
         description: "We are going to Vistos Koja restaurant",
-        endTime: "12:45",
-        startTime: "13:35",
+       endTime: "13:35",
+        startTime: "12:45",
         title: "Lunch with fam",
         type: "out-of-office",
       },
@@ -147,16 +147,16 @@ function addEventsToStorage() {
       {
         date: "2022-01-02",
         description: "Goals for the new year",
-        endTime: "16:45",
-        startTime: "18:35",
+        endTime: "18:35",
+        startTime: "16:45",
         title: "Goals 2022",
         type: "call",
       },
       {
         date: "2022-02-15",
         description: "Goals for 2022 vol.2",
-        endTime: "16:45",
-        startTime: "18:35",
+        endTime: "18:35",
+        startTime: "16:45",
         title: "Goals 2022 vol2",
         type: "call",
       },
@@ -252,9 +252,9 @@ function addEvents() {
         );
       } else if (el.innerHTML.length == 1) {
         let cellDateValue = 0 + el.innerHTML;
-        console.log(cellDateValue);
+        //console.log(cellDateValue);
         if (
-          cellDateValue === elel.date[8] + elel.date[9] &&
+          cellDateValue == elel.date[8] + elel.date[9] &&
           elel.date[5] + elel.date[6] == 02 &&
           monthSelection.value == 1 &&
           elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2022
@@ -264,23 +264,21 @@ function addEvents() {
             `<div class="calendar-event-entry"><p value="${elel.title}" class="${elel.type} view-event"> ${elel.title}</p> </div>`
           );
         }
-      } else {
-        if (el.innerHTML.length == 1) {
-          let cellDateValue = 0 + el.innerHTML;
-          console.log(cellDateValue);
-          if (
-            cellDateValue === elel.date[8] + elel.date[9] &&
-            elel.date[5] + elel.date[6] == 01 &&
-            monthSelection.value == 0 &&
-            elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2022
-          ) {
-            el.insertAdjacentHTML(
-              `afterend`,
-              `<div class="calendar-event-entry"><p value="${elel.title}" class="${elel.type} view-event"> ${elel.title}</p> </div>`
-            );
-          }
+        if (
+          cellDateValue == elel.date[8] + elel.date[9] &&
+          elel.date[5] + elel.date[6] == 01 &&
+          monthSelection.value == 0 &&
+          elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2022
+        ) {
+          el.insertAdjacentHTML(
+            `afterend`,
+            `<div class="calendar-event-entry"><p value="${elel.title}" class="${elel.type} view-event"> ${elel.title}</p> </div>`
+          );
         }
+      } else {
+        console.log("unfinished business");
       }
+
       let calendarEventColor = document.querySelectorAll(
         ".calendar-event-entry"
       );
