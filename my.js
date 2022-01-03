@@ -201,17 +201,17 @@ addEventsToStorage();
 //add event to the calendar
 function addEvents() {
   events = JSON.parse(sessionStorage.getItem("events"));
-  //console.log(events);
+  console.log(events);
   let dayCell = document.querySelectorAll("td");
   let dayCellDate = document.querySelectorAll(".date-value");
 
   //console.log(data);
   //console.log(newEvent.date[8] + newEvent.date[9]);
-  //console.log(dayCell);
- //console.log(events);
+  console.log(dayCell);
+  console.log(events);
 
   dayCellDate.forEach((el) => {
-    //console.log(el.innerHTML.length);
+    console.log(el.innerHTML.length);
     //console.log(el.childNodes[0].nodeValue);
     events.forEach((elel) => {
       //console.log(currentMonth);
@@ -222,10 +222,12 @@ function addEvents() {
         (el.innerHTML === elel.date[8] + elel.date[9] &&
           elel.date[5] + elel.date[6] == 01 &&
           monthSelection.value == 0 &&
+          yearSelection.value == 2022 &&
           elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2022) ||
         (el.innerHTML === elel.date[8] + elel.date[9] &&
           elel.date[5] + elel.date[6] == 02 &&
           monthSelection.value == 1 &&
+          yearSelection.value == 2022 &&
           elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2022) ||
         (el.innerHTML === elel.date[8] + elel.date[9] &&
           elel.date[5] + elel.date[6] == 12 &&
@@ -246,11 +248,13 @@ function addEvents() {
           (cellDateValue == elel.date[8] + elel.date[9] &&
             elel.date[5] + elel.date[6] == 02 &&
             monthSelection.value == 1 &&
+            yearSelection.value == 2022 &&
             elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] ==
               2022) ||
           (cellDateValue == elel.date[8] + elel.date[9] &&
             elel.date[5] + elel.date[6] == 01 &&
             monthSelection.value == 0 &&
+            yearSelection.value == 2022 &&
             elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2022)
         ) {
           el.insertAdjacentHTML(
@@ -281,6 +285,7 @@ function addEvents() {
   });
 }
 addEvents();
+
 
 
 function viewEventDetails() {
