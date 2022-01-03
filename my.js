@@ -201,14 +201,14 @@ addEventsToStorage();
 //add event to the calendar
 function addEvents() {
   events = JSON.parse(sessionStorage.getItem("events"));
-  console.log(events);
+  //console.log(events);
   let dayCell = document.querySelectorAll("td");
   let dayCellDate = document.querySelectorAll(".date-value");
 
   //console.log(data);
   //console.log(newEvent.date[8] + newEvent.date[9]);
-  console.log(dayCell);
-  console.log(events);
+  //console.log(dayCell);
+ //console.log(events);
 
   dayCellDate.forEach((el) => {
     console.log(el.innerHTML.length);
