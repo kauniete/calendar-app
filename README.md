@@ -1,6 +1,7 @@
 # calendar-app
-A task I did for a company in order to qualify for a front-end development internship
-Only HTML, CSS, vanilla JS, no frameworks etc allowed
+
+A task I did for a company as part of a job front-end development job application. 
+Only HTML, CSS, vanilla JS, no frameworks etc allowed. 
 I used sessionStorage to store data (it was a requirement) 
 
 Features:
