@@ -314,7 +314,7 @@ function viewEventDetails() {
         document.querySelector(".event-details-shown").remove();
       }
       elem.currentTarget.classList.add("active");
-      console.log(elem.currentTarget.innerText);
+      //console.log(elem.currentTarget.innerText);
       //let eventsData = sessionStorage.getItem("events");
       eventDetailsPlaceholder.style.display = "block";
       //console.log(viewEventButton);
