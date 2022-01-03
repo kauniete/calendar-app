@@ -201,16 +201,17 @@ addEventsToStorage();
 //add event to the calendar
 function addEvents() {
   events = JSON.parse(sessionStorage.getItem("events"));
-  //console.log(events);
+  console.log(events);
   let dayCell = document.querySelectorAll("td");
   let dayCellDate = document.querySelectorAll(".date-value");
 
   //console.log(data);
   //console.log(newEvent.date[8] + newEvent.date[9]);
-  //console.log(dayCell);
-  //console.log(events);
+  console.log(dayCell);
+  console.log(events);
 
   dayCellDate.forEach((el) => {
+    console.log(el.innerHTML.length);
     //console.log(el.childNodes[0].nodeValue);
     events.forEach((elel) => {
       //console.log(currentMonth);
@@ -218,34 +219,22 @@ function addEvents() {
       //console.log(elel.date[5] + elel.date[6]);
       //console.log(elel.date);
       if (
-        el.innerHTML === elel.date[8] + elel.date[9] &&
-        elel.date[5] + elel.date[6] == 01 &&
-        monthSelection.value == 0 &&
-        elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2022
+        (el.innerHTML === elel.date[8] + elel.date[9] &&
+          elel.date[5] + elel.date[6] == 01 &&
+          monthSelection.value == 0 &&
+          elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2022) ||
+        (el.innerHTML === elel.date[8] + elel.date[9] &&
+          elel.date[5] + elel.date[6] == 02 &&
+          monthSelection.value == 1 &&
+          elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2022) ||
+        (el.innerHTML === elel.date[8] + elel.date[9] &&
+          elel.date[5] + elel.date[6] == 12 &&
+          monthSelection.value == 11 &&
+          yearSelection.value == 2021 &&
+          elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2021)
       ) {
         //console.log(eventTitle);
 
-        el.insertAdjacentHTML(
-          `afterend`,
-          `<div class="calendar-event-entry"><p value="${elel.title}" class="${elel.type} view-event"> ${elel.title}</p> </div>`
-        );
-      } else if (
-        el.innerHTML === elel.date[8] + elel.date[9] &&
-        elel.date[5] + elel.date[6] == 02 &&
-        monthSelection.value == 1 &&
-        elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2022
-      ) {
-        el.insertAdjacentHTML(
-          `afterend`,
-          `<div class="calendar-event-entry"><p value="${elel.title}" class="${elel.type} view-event"> ${elel.title}</p> </div>`
-        );
-      } else if (
-        el.innerHTML === elel.date[8] + elel.date[9] &&
-        elel.date[5] + elel.date[6] == 12 &&
-        monthSelection.value == 11 &&
-        yearSelection.value == 2021 &&
-        elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2021
-      ) {
         el.insertAdjacentHTML(
           `afterend`,
           `<div class="calendar-event-entry"><p value="${elel.title}" class="${elel.type} view-event"> ${elel.title}</p> </div>`
@@ -254,21 +243,15 @@ function addEvents() {
         let cellDateValue = 0 + el.innerHTML;
         //console.log(cellDateValue);
         if (
-          cellDateValue == elel.date[8] + elel.date[9] &&
-          elel.date[5] + elel.date[6] == 02 &&
-          monthSelection.value == 1 &&
-          elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2022
-        ) {
-          el.insertAdjacentHTML(
-            `afterend`,
-            `<div class="calendar-event-entry"><p value="${elel.title}" class="${elel.type} view-event"> ${elel.title}</p> </div>`
-          );
-        }
-        if (
-          cellDateValue == elel.date[8] + elel.date[9] &&
-          elel.date[5] + elel.date[6] == 01 &&
-          monthSelection.value == 0 &&
-          elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2022
+          (cellDateValue == elel.date[8] + elel.date[9] &&
+            elel.date[5] + elel.date[6] == 02 &&
+            monthSelection.value == 1 &&
+            elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] ==
+              2022) ||
+          (cellDateValue == elel.date[8] + elel.date[9] &&
+            elel.date[5] + elel.date[6] == 01 &&
+            monthSelection.value == 0 &&
+            elel.date[0] + elel.date[1] + elel.date[2] + elel.date[3] == 2022)
         ) {
           el.insertAdjacentHTML(
             `afterend`,
@@ -298,6 +281,7 @@ function addEvents() {
   });
 }
 addEvents();
+
 
 function viewEventDetails() {
   //view event details on click
