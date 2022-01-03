@@ -170,9 +170,10 @@ form button {
   }
   .confirmation-pop-up {
     position: absolute;
-    margin-top: -33em;
-    margin-left: 38%;
-    margin-right: 28%;
+   margin-top: -33em;
+    left: 33%;
+    padding: 5%;
+    width: 24%;
   }
   input,
   select,
