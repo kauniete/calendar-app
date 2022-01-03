@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calendar</title>
+  </head>
+  <body>
+    <div class="top-of-app"><h1>Calendar</h1>
+    
+    <form action="">
+      <label for="month">
+      <select name="month" class="month-selector">
+          <option  value=0>Jan</option>
+          <option value=1>Feb</option>
+          <option value=2>Mar</option>
+          <option value=3>Apr</option>
+          <option value=4>May</option>
+          <option value=5>Jun</option>
+          <option value=6>Jul</option>
+          <option value=7>Aug</option>
+          <option value=8>Sep</option>
+          <option value=9>Oct</option>
+          <option value=10>Nov</option>
+          <option value=11>Dec</option>
+      </select>
+    </label>
+<label for="year">
+  <select name="year" class="year-selector">
+    
+            <option value=2021>2021</option>
+            <option value=2022>2022</option>
+  </select>
+</label>
+
+    </form>
+    <button class="create-entry-open-form"> Create event</button></div>
+    
+    <div class="wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sund</th>
+          </tr>
+        </thead>
+        <tbody id="day-cells"></tbody>
+      </table>
+      <aside>
+        
+        <form  class="create-view" action="" method="get">
+            <h1>Event</h1>
+          <label for="title">
+            Title
+            <input class="title form-data"
+              name="title"
+              type="text"
+              required
+              maxlength="50"
+              placeholder="a maximum of 50 chars"
+            />
+          </label>
+          <label for="date">
+            Date
+            <input class="date form-data" name="date" type="date" required />
+          </label>
+          <label for="start-time">
+            Start time
+            <input class="start-time form-data" name="start-time" type="time" required />
+          </label>
+          <label for="end-time"
+            >End time
+            <input class="end-time form-data" name="end-time" type="time" required />
+          </label>
+          <label for="type"
+            >Type
+            <select  class="type form-data" name="type" type="text" required>
+              <option value="meeting">Meeting</option>
+              <option value="call">Call</option>
+              <option value="out-of-office">Out of office</option>
+            </select>
+          </label>
+          <label for="description"
+            >Description </label>
+            <textarea class="description form-data" name="description" type="text" rows="4"  />
+        </textarea>
+         <button class="create-entry-button" type="submit"> Submit</button>
+        </form>
+        <div class="event-details">
+          <h1>Event details</h1>
+          
+        </div>
+        <div class="confirmation-pop-up">
+          <p>Are you sure?</p>
+          <button class="yes">Yes</button>
+          <button class="no">No</button>
+        </div>
+      </aside>
+    </div>
+    <script src="my.js"></script>
+  </body>
+</html>
