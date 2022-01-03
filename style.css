@@ -187,6 +187,10 @@ form button {
     width: 100%;
     font-size: 12px;
     height:100vh;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   table {
     width: 100vw;
