@@ -183,6 +183,8 @@ form button {
   .confirmation-pop-up {
     z-index: 3;
   }
+  .form-data{
+  width: 95%;}
   body {
     overflow-x: hidden;
     width: 100%;
